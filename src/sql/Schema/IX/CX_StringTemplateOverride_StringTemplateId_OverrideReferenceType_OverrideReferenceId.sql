@@ -1,0 +1,2 @@
+CREATE UNIQUE CLUSTERED INDEX  CX_StringTemplateOverride_StringTemplateId_OverrideReferenceType_OverrideReferenceId ON dbo.StringTemplateOverride (StringTemplateId, OverrideReferenceType, OverrideReferenceId)
+GO

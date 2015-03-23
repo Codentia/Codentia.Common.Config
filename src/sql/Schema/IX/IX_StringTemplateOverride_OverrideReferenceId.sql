@@ -1,0 +1,3 @@
+CREATE INDEX IX_StringTemplateOverride_OverrideReferenceId ON dbo.StringTemplateOverride (OverrideReferenceId)
+GO
+ 

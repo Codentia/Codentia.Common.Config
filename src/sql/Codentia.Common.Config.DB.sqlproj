@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Codentia.Common.Config.DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{7bf9430a-5d6b-44c6-b136-bcb329177b51}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Codentia.Common.Config.DB</RootNamespace>
+    <AssemblyName>Codentia.Common.Config.DB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Data" />
+    <Folder Include="Data\Test" />
+    <Folder Include="Functions" />
+    <Folder Include="Schema" />
+    <Folder Include="Schema\IX" />
+    <Folder Include="Schema\FK" />
+    <Folder Include="Schema\Tables" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="Data\Always" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Test\_001_ConfigTestData.sql" />
+    <None Include="Data\Test\_002_TemplateTestData.sql" />
+    <None Include="Functions\fn_ConfigSetting.sql" />
+    <None Include="Functions\fn_StringTemplate.sql" />
+    <Build Include="Schema\IX\CX_ConfigSetting_ConfigSettingCode.sql" />
+    <Build Include="Schema\IX\CX_ConfigSettingOverride_ConfigSettingId_OverrideReferenceType_OverrideReferenceId.sql" />
+    <Build Include="Schema\IX\CX_ConfigSettingValue_ConfigSettingId.sql" />
+    <Build Include="Schema\IX\CX_StringTemplate_StringTemplateCode.sql" />
+    <Build Include="Schema\IX\CX_StringTemplateOverride_StringTemplateId_OverrideReferenceType_OverrideReferenceId.sql" />
+    <Build Include="Schema\IX\CX_StringTemplateValue_StringTemplateId.sql" />
+    <Build Include="Schema\IX\IX_ConfigSettingOverride_OverrideReferenceId.sql" />
+    <Build Include="Schema\IX\IX_StringTemplateOverride_OverrideReferenceId.sql" />
+    <Build Include="Schema\IX\PK_ConfigSetting.sql" />
+    <Build Include="Schema\IX\PK_ConfigSettingOverride.sql" />
+    <Build Include="Schema\IX\PK_ConfigSettingValue.sql" />
+    <Build Include="Schema\IX\PK_StringTemplate.sql" />
+    <Build Include="Schema\IX\PK_StringTemplateOverride.sql" />
+    <Build Include="Schema\IX\PK_StringTemplateValue.sql" />
+    <Build Include="Schema\FK\FK_ConfigSettingOverride_ConfigSetting_ConfigSettingId.sql" />
+    <Build Include="Schema\FK\FK_ConfigSettingValue_ConfigSetting_ConfigSettingId.sql" />
+    <Build Include="Schema\FK\FK_StringTemplateOverride_StringTemplate_StringTemplateId.sql" />
+    <Build Include="Schema\FK\FK_StringTemplateValue_StringTemplate_StringTemplateId.sql" />
+    <Build Include="Schema\Tables\ConfigSetting.sql" />
+    <Build Include="Schema\Tables\ConfigSettingOverride.sql" />
+    <Build Include="Schema\Tables\ConfigSettingValue.sql" />
+    <Build Include="Schema\Tables\StringTemplate.sql" />
+    <Build Include="Schema\Tables\StringTemplateOverride.sql" />
+    <Build Include="Schema\Tables\StringTemplateValue.sql" />
+    <None Include="StoredProcedures\ConfigSetting_Exists.sql" />
+    <None Include="StoredProcedures\ConfigSetting_Get.sql" />
+    <None Include="StoredProcedures\ConfigSetting_GetAll.sql" />
+    <None Include="StoredProcedures\StringTemplate_Exists.sql" />
+    <None Include="StoredProcedures\StringTemplate_Get.sql" />
+    <None Include="StoredProcedures\StringTemplate_GetAll.sql" />
+  </ItemGroup>
+</Project>

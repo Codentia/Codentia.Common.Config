@@ -1,0 +1,3 @@
+CREATE INDEX IX_ConfigSettingOverride_OverrideReferenceId ON dbo.ConfigSettingOverride (OverrideReferenceId)
+GO
+ 

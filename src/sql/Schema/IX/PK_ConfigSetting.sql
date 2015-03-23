@@ -1,0 +1,3 @@
+ALTER TABLE dbo.ConfigSetting ADD CONSTRAINT PK_ConfigSetting PRIMARY KEY NONCLUSTERED (ConfigSettingId)
+GO
+ 

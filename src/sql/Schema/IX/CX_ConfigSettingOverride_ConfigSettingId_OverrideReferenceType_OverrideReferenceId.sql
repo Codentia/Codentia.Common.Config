@@ -1,0 +1,2 @@
+CREATE UNIQUE CLUSTERED INDEX  CX_ConfigSettingOverride_ConfigSettingId_OverrideReferenceType_OverrideReferenceId ON dbo.ConfigSettingOverride (ConfigSettingId, OverrideReferenceType, OverrideReferenceId)
+GO
