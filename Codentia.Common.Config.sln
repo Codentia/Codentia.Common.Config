@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codentia.Common.Config", "src\app\Codentia.Common.Config.csproj", "{07562863-E0DB-4164-8CEB-2D409C5BE092}"
 EndProject
@@ -20,11 +20,7 @@ Global
 		{07562863-E0DB-4164-8CEB-2D409C5BE092}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07562863-E0DB-4164-8CEB-2D409C5BE092}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7BF9430A-5D6B-44C6-B136-BCB329177B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BF9430A-5D6B-44C6-B136-BCB329177B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BF9430A-5D6B-44C6-B136-BCB329177B51}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{7BF9430A-5D6B-44C6-B136-BCB329177B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BF9430A-5D6B-44C6-B136-BCB329177B51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BF9430A-5D6B-44C6-B136-BCB329177B51}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{61DD3595-38BC-4C98-80A9-B119F19924C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{61DD3595-38BC-4C98-80A9-B119F19924C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61DD3595-38BC-4C98-80A9-B119F19924C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
